@@ -4,7 +4,7 @@ const messages = document.querySelector('.messages');
 const theme = document.querySelector('#theme');
 const themeModal = document.querySelector('.customize-theme');
 const fontSizes = document.querySelectorAll('.choose-size span');
-var root = document.querySelector(':root');
+const root = document.querySelector(':root');
 const colorPalette = document.querySelectorAll('.choose-color span');
 const  Bg1 = document.querySelector('.bg-1');
 const  Bg2 = document.querySelector('.bg-2');
@@ -123,7 +123,7 @@ let darkColorLightness;
 
 const changeBG = () => {
     root.style.setProperty('--light-color-lightness', lightColorLightness);
-    root.style.setProperty('--while-color-lightness', whiteColorLightness);
+    root.style.setProperty('--white-color-lightness', whiteColorLightness);
     root.style.setProperty('--dark-color-lightness', darkColorLightness);
 }
 Bg1.addEventListener('click', () => {
@@ -140,7 +140,7 @@ Bg2.addEventListener('click', () => {
 
     Bg2.classList.add('active');
     Bg1.classList.remove('active');
-    Bg2.classList.remove('active');
+    Bg3.classList.remove('active');
     changeBG();
 })
 
